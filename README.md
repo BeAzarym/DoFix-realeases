@@ -8,7 +8,7 @@ Un seul programme, rien d'autre à installer. Windows 10 ou 11, 64 bits.
 
 ## Installation
 
-1. Ouvre la page [Releases](https://github.com/BeAzarym/DoFix-releases/releases/latest).
+1. Ouvre la page [Releases]([https://github.com/BeAzarym/DoFix-realeases/releases)).
 2. Télécharge `DoFix-Setup-x.y.z.exe` et lance-le.
 3. Windows peut afficher « Windows a protégé votre ordinateur » : clique sur **Informations complémentaires**, puis **Exécuter quand même**. Le programme n'est pas signé, c'est la seule raison de cet avertissement.
 
