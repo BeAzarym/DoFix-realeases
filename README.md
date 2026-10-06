@@ -1,8 +1,10 @@
 # DoFix
 
-DoFix est un petit programme Windows pour jouer à Dofus en multicompte : il range tes fenêtres en équipes, te fait passer de l'une à l'autre en une touche, reproduit un clic sur toute l'équipe et colle automatiquement ce que Ganymede copie.
+DoFix est un petit programme Windows pour jouer à Dofus en multicompte : il range tes fenêtres en équipes, te fait passer de l'une à l'autre en une touche, reproduit un clic sur toute l'équipe, téléporte l'équipe sur un zaap et colle automatiquement ce que Ganymede copie.
 
 Un seul programme, rien d'autre à installer. Windows 10 ou 11, 64 bits.
+
+**Version actuelle : 1.1.0** — voir les [notes de version](https://github.com/BeAzarym/DoFix-realeases/releases).
 
 > DoFix est un projet personnel, sans lien avec Ankama. Lis la section [À savoir](#à-savoir) avant de l'utiliser.
 
@@ -38,11 +40,20 @@ L'installation se fait dans ton profil, sans droits administrateur. DoFix appara
 ### Navigation et clics
 - Fenêtre suivante / précédente, accès direct aux fenêtres 1 à 8.
 - **Cercle des fenêtres** : maintenir le clic molette, choisir un personnage par son pseudo.
-- **Clic reproduit** : `Ctrl + Alt + clic` rejoue le clic au même endroit dans chaque fenêtre de l'équipe.
+- **Clic reproduit** : `Ctrl + Alt + clic` rejoue le clic au même endroit dans chaque fenêtre de l'équipe. Quand les fenêtres sont empilées, la souris ne bouge pas : le clic est rejoué sur place dans chacune.
 - **Grille** : `Ctrl + Alt + G` range les fenêtres en grille ; une deuxième fois, il les remet toutes en grand.
+
+### Zaaps
+Depuis Dofus 3.7, la commande `/zaap x,y` téléporte un personnage sur un zaap.
+- `Ctrl + Alt + X` ouvre la liste des zaaps.
+- Tape pour chercher : un nom, une zone ou des coordonnées, avec ou sans accents.
+- Flèches puis Entrée, ou un clic : la commande est envoyée dans chaque fenêtre de l'équipe active, puis DoFix revient chez le chef.
+- Les 5 derniers zaaps utilisés restent en tête de liste.
 
 ### Collage automatique
 Quand Ganymede copie quelque chose, DoFix passe sur la fenêtre du chef, colle et valide.
+
+Exception : si c'est une commande `/zaap`, elle est collée dans toutes les fenêtres de l'équipe active, puisque chaque personnage doit la lancer. `/travel` et le reste vont chez le chef seulement.
 
 ### Barre des tâches
 Les fenêtres de l'équipe active sont rangées dans l'ordre de l'équipe dans la barre Windows, avant les fenêtres inactives.
@@ -59,6 +70,7 @@ Tous s'utilisent avec **Ctrl gauche + Alt gauche**. AltGr reste libre. Ils se mo
 | `Ctrl + Alt + 1` … `8` | Aller à la fenêtre n° |
 | `Ctrl + Alt + ↑` / `↓` | Équipe précédente / suivante |
 | `Ctrl + Alt + G` | Grille / fenêtres en grand |
+| `Ctrl + Alt + X` | Téléporter l'équipe sur un zaap |
 | `Ctrl + Alt + clic` | Clic reproduit sur toute l'équipe |
 | `Ctrl + Alt + P` | Mode normal / discret |
 | `Ctrl + Alt + Page haut` / `Page bas` | Clics plus rapides / plus lents |
@@ -80,6 +92,6 @@ La vérification se coupe dans **Paramètres → Application**. Tu peux aussi in
 
 ## À savoir
 
-- **Règles du jeu** : DoFix n'est ni fourni ni approuvé par Ankama. Les outils qui envoient une action sur plusieurs fenêtres à la fois peuvent être contraires aux règles de Dofus. Vérifie les règles en vigueur et utilise le clic reproduit à tes risques.
+- **Règles du jeu** : DoFix n'est ni fourni ni approuvé par Ankama. Les outils qui envoient une action sur plusieurs fenêtres à la fois peuvent être contraires aux règles de Dofus. Vérifie les règles en vigueur et utilise le clic reproduit et la téléportation d'équipe à tes risques.
 - **Antivirus** : DoFix écoute le clavier et la souris pour ses raccourcis et simule des clics. Certains antivirus peuvent le signaler à tort.
 - **Données** : tout reste sur ton PC, dans `DoFix.ini` à côté du programme. La seule connexion réseau est la vérification de mise à jour auprès de GitHub.
